@@ -18,3 +18,13 @@ Movie.create(title: 'Titanic', overview: '101-year-old Rose DeWitt Bukater tells
 Movie.create(title: 'Ocean\'s Eight', overview: 'Debbie Ocean, a criminal mastermind, gathers a crew of female thieves
   to pull off the heist of the century.', poster_url: 'https://image.tmdb.org/t/p/original/MvYpKlpFukTivnlBhizGbkAe3v.jpg',
              rating: 7.0)
+Movie.create(title: 'No Time to Die', overview: 'Bond has left active service and is enjoying a tranquil life in Jamaica.
+  His peace is short-lived when his old friend Felix Leiter from the CIA turns up asking for help. The mission to rescue
+  a kidnapped scientist turns out to be far more treacherous than expected, leading Bond onto the trail of a mysterious
+  villain armed with dangerous new technology.', poster_url: 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/iUgygt3fscRoKWCV1d0C7FbM9TP.jpg',
+             rating: 7.5)
+Movie.create(title: 'A Bronx Tale', overview: 'Set in the Bronx during the tumultuous 1960s, an adolescent boy is torn
+  between his honest, working-class father and a violent yet charismatic crime boss. Complicating matters is the youngster\'s
+  growing attraction - forbidden in his neighborhood - for a beautiful black girl.',
+             poster_url: 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/sDbO6LmLYtyqAoFTPpRcMgPSCEO.jpg',
+             rating: 7.7)
