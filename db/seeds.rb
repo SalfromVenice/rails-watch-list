@@ -44,3 +44,18 @@ Movie.create(title: 'Guardians of the Galaxy', overview: 'Light years from Earth
   Quill finds himself the prime target of a manhunt after discovering an orb wanted by Ronan the Accuser.',
              poster_url: 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/r7vmZjiyZw9rpJMQJdXpjgiCOk9.jpg',
              rating: 7.9)
+
+# require 'json'
+# require 'open-uri'
+
+# def movies_dataset
+#   url = 'http://tmdb.lewagon.commovie/top_rated'
+#   movies_serialized = URI.open(url).read
+#   movies = JSON.parse(movies_serialized)
+#   movies.each do |m|
+#   Movie.create(title: m['title'], overview: m['overview'],
+#                poster_url: "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/#{m[poster_path]}",
+#                rating: m['vote_average'])
+#   end
+# end
+# movies_dataset
