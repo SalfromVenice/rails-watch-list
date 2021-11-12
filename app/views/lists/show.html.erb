@@ -1,4 +1,4 @@
-<h1><%= @list.name %></h1>
+<div class="d-flex align-items-center"><h1><%= @list.name %></h1><%= link_to raw('<i class="far fa-trash-alt"></i>'), list_path(@list), method: :delete, data: { confirm: "Remove #{@list.name}?" }, class: 'btn btn-outline-danger btn-sm' %></div>
 <br>
 <div class="container bg-light d-flex">
   <div class="row">

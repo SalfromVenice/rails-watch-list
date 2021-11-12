@@ -1,5 +1,6 @@
-<h1>Lists</h1>
+<h1>Watch List</h1>
 
+<h3>Your lists</h3>
 <% @lists.each do |list| %>
   <ul>
     <li><%= link_to list.name, list_path(list) %></li>
