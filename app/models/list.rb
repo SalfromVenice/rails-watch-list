@@ -4,5 +4,5 @@ class List < ApplicationRecord
   has_one_attached :image
 
   validates :name, uniqueness: true
-  validates :name, presence: true
+  validates :name, :image, presence: true
 end

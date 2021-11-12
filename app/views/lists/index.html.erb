@@ -1,6 +1,9 @@
-<h1>Watch List</h1>
-
-<h3>Your lists</h3>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1585647347384-2593bc35786b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80');">
+  <div class="container">
+    <h1><h1>Watch List</h1></h1>
+  </div>
+</div>
+<br>
 <% @lists.each do |list| %>
   <ul>
     <li><%= link_to list.name, list_path(list) %></li>
