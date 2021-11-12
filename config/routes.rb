@@ -8,5 +8,6 @@ Rails.application.routes.draw do
   # post 'lists', to: 'lists#create'
   # get 'lists/new', to: 'lists#new', as: :new_list
   # get 'lists/:id', to: 'lists#show', as: :list
+  root to: 'lists#index'
 
 end
