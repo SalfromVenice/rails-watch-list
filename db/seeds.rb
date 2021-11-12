@@ -28,3 +28,19 @@ Movie.create(title: 'A Bronx Tale', overview: 'Set in the Bronx during the tumul
   growing attraction - forbidden in his neighborhood - for a beautiful black girl.',
              poster_url: 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/sDbO6LmLYtyqAoFTPpRcMgPSCEO.jpg',
              rating: 7.7)
+Movie.create(title: 'Space Jam', overview: 'Jokes fly as the Tune Squad takes on the Nerdlucks in a hardcourt game to
+  decide if the Looney Tunes remain here... or become attractions at a far-off galactic off-ramp called Moron Mountain.
+  The Nerdlucks have a monstrous secret weapon: they\'ve stolen the skills of top NBA stars like Charles Barkley and
+  Patrick Ewing and become Monstars. But that\'s not all, folks. The Tune Squad’s secret weapon just happens to be the
+  finest player in this or any other universe. He\'s outta this world. So\'s the fun.',
+             poster_url: 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/4RN5El3Pj2W4gpwgiAGLVfSJv2g.jpg',
+             rating: 6.9)
+Movie.create(title: 'Spider-Man: Homecoming', overview: 'Following the events of Captain America: Civil War, Peter Parker,
+  with the help of his mentor Tony Stark, tries to balance his life as an ordinary high school student in Queens, New York
+  City, with fighting crime as his superhero alter ego Spider-Man as a new threat, the Vulture, emerges.',
+             poster_url: 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/c24sv2weTHPsmDa7jEMN0m2P3RT.jpg',
+             rating: 7.4)
+Movie.create(title: 'Guardians of the Galaxy', overview: 'Light years from Earth, 26 years after being abducted, Peter
+  Quill finds himself the prime target of a manhunt after discovering an orb wanted by Ronan the Accuser.',
+             poster_url: 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/r7vmZjiyZw9rpJMQJdXpjgiCOk9.jpg',
+             rating: 7.9)
