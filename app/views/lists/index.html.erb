@@ -5,9 +5,7 @@
 </div>
 <br>
 <% @lists.each do |list| %>
-  <ul>
-    <li><%= link_to list.name, list_path(list) %></li>
-  </ul>
+    <div class="little-card col-3" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= cl_image_path list.image.key, height: 80, crop: :fill%>')"><%= link_to list.name, list_path(list)%></div>
 <% end %>
 <br>
 <%= link_to "+ add list", new_list_path, class: "btn btn-outline-primary" %>
