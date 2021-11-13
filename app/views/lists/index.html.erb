@@ -4,8 +4,10 @@
   </div>
 </div>
 <br>
-<% @lists.each do |list| %>
-    <div class="little-card col-3" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= cl_image_path list.image.key, height: 80, crop: :fill%>')"><%= link_to list.name, list_path(list)%></div>
-<% end %>
+<div class="d-flex">
+  <% @lists.each do |list| %>
+    <%= link_to list.name, list_path(list), class: "little-card col-3 m-2 text-decoration-none", style:"background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('#{cl_image_path list.image.key, height: 80, crop: :fill}')" %>
+  <% end %>
+</div>
 <br>
 <%= link_to "+ add list", new_list_path, class: "btn btn-outline-primary" %>
