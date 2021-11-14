@@ -4,9 +4,9 @@
   </div>
 </div>
 <br>
-<div class="d-flex">
+<div class="d-flex flex-wrap" style="width: 100%">
   <% @lists.each do |list| %>
-    <%= link_to list.name, list_path(list), class: "little-card col-3 m-2 text-decoration-none", style:"background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('#{cl_image_path list.image.key, height: 80, crop: :fill}')" %>
+    <%= link_to list.name, list_path(list), class: "little-card m-2 text-decoration-none", style:"background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('#{cl_image_path list.image.key, height: 80, crop: :fill}')" %>
   <% end %>
 </div>
 <br>
