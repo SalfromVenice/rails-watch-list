@@ -15,11 +15,11 @@
           <div class="d-flex flex-column justify-content-between ml-2">
             <h4><%= bm.movie.title %></h4>
           <h5>rated: <%= bm.movie.rating %></h5>
-          <h5><%= bm.comment %></h5>
+          <h5 class="scroll"><%= bm.comment %></h5>
           </div>
             <%= link_to raw('<i class="far fa-trash-alt"></i>'), bookmark_path(bm), method: :delete, data: { confirm: "Remove #{bm.movie.title}?" }, class: 'btn btn-danger btn-sm' %>
         </div>
-        <p><%= bm.movie.overview %></p>
+        <p class="scroll card-p"><%= bm.movie.overview %></p>
       </div>
     <% end %>
   </div>
