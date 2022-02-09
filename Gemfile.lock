@@ -87,6 +87,9 @@ GEM
     http-accept (1.7.0)
     http-cookie (1.0.4)
       domain_name (~> 0.5)
+    httparty (0.20.0)
+      mime-types (~> 3.0)
+      multi_xml (>= 0.5.2)
     i18n (1.8.11)
       concurrent-ruby (~> 1.0)
     jbuilder (2.11.2)
@@ -109,6 +112,7 @@ GEM
     mini_portile2 (2.6.1)
     minitest (5.14.4)
     msgpack (1.4.2)
+    multi_xml (0.6.0)
     netrc (0.11.0)
     nio4r (2.5.8)
     nokogiri (1.12.5)
@@ -208,6 +212,8 @@ GEM
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
     stringio (3.0.1)
+    themoviedb (1.0.1)
+      httparty
     thor (1.1.0)
     thread_safe (0.3.6)
     tilt (2.0.10)
@@ -259,6 +265,7 @@ DEPENDENCIES
   simple_form
   spring
   spring-watcher-listen (~> 2.0.0)
+  themoviedb
   turbolinks (~> 5)
   tzinfo-data
   web-console (>= 3.3.0)
