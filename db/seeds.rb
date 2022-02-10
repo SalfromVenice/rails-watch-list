@@ -49,12 +49,12 @@ require 'json'
 require 'open-uri'
 
 def movies_dataset
-  url = 'http://tmdb.lewagon.commovie/top_rated'
+  url = ENV['TMDB_URL']
   movies_serialized = URI.open(url).read
   movies = JSON.parse(movies_serialized)
-  movies.each do |m|
+  movies['results'].each do |m|
   Movie.create(title: m['title'], overview: m['overview'],
-               poster_url: "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/#{m[poster_path]}",
+               poster_url: "https://www.themoviedb.org/t/p/w600_and_h900_bestv2#{m['poster_path']}",
                rating: m['vote_average'])
   end
 end
