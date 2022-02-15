@@ -4,6 +4,6 @@ class List < ApplicationRecord
   has_many :movies, through: :bookmarks
   has_one_attached :image
 
-  validates :name, uniqueness: true
+  validates :name, uniqueness: { scope: :user_id}
   validates :name, :image, :user_id, presence: true
 end
