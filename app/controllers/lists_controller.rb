@@ -1,6 +1,7 @@
 class ListsController < ApplicationController
   def index
-    @lists = List.all
+    @user = current_user
+    @lists = List.all.where(params[:user_id])
   end
 
   def show
@@ -35,6 +36,6 @@ class ListsController < ApplicationController
   private
 
   def list_params
-    params.require(:list).permit(:name, :image)
+    params.require(:list).permit(:name, :image, :user_id)
   end
 end
