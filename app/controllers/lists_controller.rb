@@ -1,6 +1,7 @@
 class ListsController < ApplicationController
   def index
-    @lists = List.all
+    @user = current_user
+    @lists = List.where(user_id: @user)
   end
 
   def show
@@ -10,11 +11,14 @@ class ListsController < ApplicationController
   end
 
   def new
+    @user = current_user
     @list = List.new
   end
 
   def create
+    @user = current_user
     @list = List.new(list_params)
+    @list.user = @user
     if @list.save
       redirect_to list_path(@list)
     else
