@@ -28,12 +28,8 @@ class ListsController < ApplicationController
 
   def destroy
     @list = List.find(params[:id])
-    if @list.bookmarks.empty?
-      @list.destroy
-      redirect_to lists_path
-    else
-      redirect_to list_path(@list)
-    end
+    @list.destroy
+    redirect_to lists_path
   end
 
   private
