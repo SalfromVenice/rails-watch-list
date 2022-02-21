@@ -3,4 +3,18 @@ class Movie < ApplicationRecord
 
   validates :title, uniqueness: true
   validates :title, :overview, presence: true
+
+  def search(query)
+    require 'json'
+    require 'open-uri'
+
+    url = ENV['TMBB_BASE_API']+'&query='+query
+    movies_serialized = URI.open(url).read
+    movies = JSON.parse(movies_serialized)
+    movies['results'].each do |m|
+    Movie.create(title: m['title'], overview: m['overview'],
+                poster_url: "https://www.themoviedb.org/t/p/w600_and_h900_bestv2#{m['poster_path']}",
+                rating: m['vote_average'])
+    end
+  end
 end

@@ -5,6 +5,7 @@ Rails.application.routes.draw do
     resources :bookmarks, only: %i[new create]
   end
   resources :bookmarks, only: %i[destroy]
+  resources :movies
   # get 'lists', to: 'lists#index'
   # post 'lists', to: 'lists#create'
   # get 'lists/new', to: 'lists#new', as: :new_list
