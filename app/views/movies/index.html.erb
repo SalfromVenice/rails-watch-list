@@ -1,0 +1,13 @@
+<h1>Select a movie</h1>
+<div class="container col-6">
+  <% @movies.each do |m| %>
+    <div class='col-4'>
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= "https://www.themoviedb.org/t/p/w600_and_h900_bestv2#{m['poster_path']}" %>)">
+        <p><%= m['title'] %></p>
+      </div>
+      <p class="scroll card-p"><%= m['overview'] %></p>
+    </div>
+  <% end %>
+</div>
+<br>
+<%= link_to '< Back', lists_path, class: "btn btn-outline-primary" %>
