@@ -10,13 +10,9 @@ class MoviesController < ApplicationController
     end
   end
 
-  # def create
-  #   @movie = Movie.search(params[:search][:title])
-  #   @movie.save
-  # end
-
   def index
-    @movies = Movie.search(params[:search][:title])
+    query = "Spider-man".gsub(/[[:punct:]]/, '%')
+    @movies = Movie.where("lower(title) LIKE lower(?)", "%#{query}%")
   end
 
   private

@@ -2,7 +2,7 @@
 <div class="container col-6">
   <% @movies.each do |m| %>
     <div class='col-4'>
-      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= "https://www.themoviedb.org/t/p/w600_and_h900_bestv2#{m['poster_path']}" %>)">
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= m['poster_url'] %>)">
         <p><%= m['title'] %></p>
       </div>
       <p class="scroll card-p"><%= m['overview'] %></p>
