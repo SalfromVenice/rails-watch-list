@@ -4,14 +4,14 @@ class MoviesController < ApplicationController
     if params[:search]
       query = params[:search][:title]
       @movies = Movie.search(query)
-      redirect_to movies_path
+      redirect_to movies_path(passed_parameter: params[:search][:title])
     else
       @movies = ""
     end
   end
 
   def index
-    query = "Spider-man".gsub(/[[:punct:]]/, '%')
+    query = params[:passed_parameter].gsub(/[[:punct:]]/, '%')
     @movies = Movie.where("lower(title) LIKE lower(?)", "%#{query}%")
   end
 
