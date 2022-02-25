@@ -14,7 +14,8 @@ class Movie < ApplicationRecord
     movies['results'].each do |m|
       Movie.create(title: m['title'], overview: m['overview'],
         poster_url: "https://www.themoviedb.org/t/p/w600_and_h900_bestv2#{m['poster_path']}",
-        rating: m['vote_average'])
+        rating: m['vote_average'],
+        popularity: m['popularity'])
     end
   end
 end
