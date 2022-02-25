@@ -12,7 +12,7 @@ class MoviesController < ApplicationController
 
   def index
     query = params[:passed_parameter].gsub(/[[:punct:]]/, '%')
-    @movies = Movie.where("lower(title) LIKE lower(?)", "%#{query}%")
+    @movies = Movie.where("lower(replace(title, '-', '')) LIKE lower(?)", "%#{query}%").order('popularity DESC')
   end
 
   private
