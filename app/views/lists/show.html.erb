@@ -30,5 +30,5 @@
   </div>
 </div>
 <br>
-<%= link_to "search a movie", new_movie_path, class: "btn btn-outline-primary" %>
+<%= link_to "search a movie", new_movie_path(passed_parameter: {list_id: params[:id]}), class: "btn btn-outline-primary" %>
 <%= link_to '< Back', lists_path, class: "btn btn-outline-primary" %>
