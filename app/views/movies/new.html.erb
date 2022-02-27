@@ -1,0 +1,10 @@
+<h1>Search for a movie for <%= @list.name %></h1>
+<div class="container bg-light col-6">
+  <%= simple_form_for :search, method: "GET", html: { class: 'form-inline' } do |f| %>
+  <%= f.input :title %>
+  <%= f.hidden_field :list_id, value: @list.id %>
+  <%= f.submit "Search", class: "btn btn-primary" %>
+  <% end %>
+</div>
+<br>
+<%= link_to '< Back', lists_path, class: "btn btn-outline-primary" %>

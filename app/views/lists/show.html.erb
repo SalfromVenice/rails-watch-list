@@ -1,11 +1,9 @@
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= cl_image_path @list.image.key, height: 300, crop: :fill%>');">
   <div class="container">
     <h1><%= @list.name %></h1>
-    <%= link_to raw('<i class="far fa-trash-alt"></i>'), list_path(@list), method: :delete, data: { confirm: "List with contents can not be removed.\nRemove #{@list.name}?" }, class: 'btn btn-outline-danger btn-sm m-3' %>
+    <%= link_to raw('<i class="far fa-trash-alt"></i>'), list_path(@list), method: :delete, data: { confirm: "Are you sure to remove #{@list.name}?" }, class: 'btn btn-outline-danger btn-sm m-3' %>
   </div>
 </div>
-
-
 <br>
 <div class="container bg-light d-flex">
   <div class="row">
@@ -32,4 +30,5 @@
   </div>
 </div>
 <br>
+<%= link_to "search a movie", new_movie_path(passed_parameter: {list_id: params[:id]}), class: "btn btn-outline-primary" %>
 <%= link_to '< Back', lists_path, class: "btn btn-outline-primary" %>

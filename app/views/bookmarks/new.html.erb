@@ -1,7 +1,7 @@
 <h1>Add a bookmark</h1>
 <div class="container  bg-light col-6">
   <%= simple_form_for [@list, @bookmark] do |f| %>
-    <%= f.association :movie %>
+    <%= f.hidden_field :movie_id, value: @movie.id %>
     <%= f.input :comment %>
     <%= f.button :submit, class: 'btn btn-primary btn-sm' %>
   <% end %>

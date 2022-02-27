@@ -1,0 +1,15 @@
+<h1>Add a movie to <%= @list.name %></h1>
+<div class="container col-10">
+  <% @movies.each do |m| %>
+    <div class='col-6 d-flex'>
+      <div class="card-category col-4" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= m['poster_url'] %>)"></div>
+      <div>
+        <h4><%= m['title'] %></h4>
+        <p class="scroll card-p"><%= m['overview'] %></p>
+      </div>
+       <%= link_to '+', new_list_bookmark_path(list_id: @list.id, movie_id: m['id']), class: "btn btn-success" %>
+    </div>
+  <% end %>
+</div>
+<br>
+<%= link_to '< Back', new_movie_path, class: "btn btn-outline-primary" %>
