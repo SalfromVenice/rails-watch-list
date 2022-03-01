@@ -1,5 +1,5 @@
 <h1>Add a bookmark</h1>
-<div class="container  bg-light col-6">
+<div class="container bg-light col-6">
   <%= simple_form_for [@list, @bookmark] do |f| %>
     <%= f.hidden_field :movie_id, value: @movie.id %>
     <%= f.input :comment %>
