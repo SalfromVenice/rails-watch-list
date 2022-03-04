@@ -10,7 +10,7 @@ const enable = (target, btn, empty) => {
 
 const initDisable = () => {
   const input = document.querySelector('#search_title');
-  const submit = document.querySelector('form input.btn.btn-primary.dis');
+  const submit = document.querySelector('form input.dis');
     enable(input, submit);
 };
 
