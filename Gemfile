@@ -22,7 +22,7 @@ gem 'jbuilder', '~> 2.7'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 gem 'autoprefixer-rails', '10.2.5'
-gem 'font-awesome-sass', '~> 5.12.0'
+gem 'font-awesome-sass', '~> 5.15.1'
 gem 'simple_form'
 gem 'cloudinary', '~> 1.16.0'
 gem 'open-uri'

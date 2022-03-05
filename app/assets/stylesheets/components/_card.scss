@@ -19,3 +19,14 @@
 .card-p {
    height: 100px;
 }
+
+.movie-card {
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  padding: 0;
+  margin: 10px 10px;
+
+  .card-category {
+    border-radius: 5px 0 0 5px;
+  }
+}
