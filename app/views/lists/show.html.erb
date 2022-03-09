@@ -20,8 +20,19 @@
       </div>
     <% end %>
     <div class="col-3">
-      <%= link_to icon('fas', 'plus'), new_movie_path(passed_parameter: {list_id: params[:id]}), class: "btn btn-outline-primary btn-bookmark" %>
+      <div class='btn btn-outline-primary btn-bookmark show'><%= icon('fas', 'plus') %></div>
+      <%#link_to icon('fas', 'video'), new_movie_path(passed_parameter: {list_id: params[:id]}), class: "btn btn-outline-primary btn-bookmark" %>
     </div>
 </div>
 <br>
-<%= link_to '< Back', :back, class: "btn btn-outline-primary" %>
+<div class="bg d-none">
+  <div class="container bg-light col-6 popup">
+    <h2><%= icon('fab', 'sistrix') %> Search for a movie</h2>
+    <span class="x"><%= icon('fas', 'times-circle') %></span>
+      <%= simple_form_for :search, url: (new_movie_path), method: "GET", html: { class: 'form-inline' } do |f| %>
+        <%= f.input :title, label: icon('fas', 'video'), placeholder: "enter a title" %>
+        <%= f.hidden_field :list_id, value: @list.id %>
+        <%= f.submit 'search', disabled: 'disabled', class: "btn btn-primary dis"%>
+      <% end %>
+  </div>
+</div>

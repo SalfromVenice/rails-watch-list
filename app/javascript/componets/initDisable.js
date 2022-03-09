@@ -1,4 +1,4 @@
-const enable = (target, btn, empty) => {
+const enable = (target, btn) => {
   target.addEventListener('keyup', () => {
     if (target.value.length == 0) {
       btn.setAttribute('disabled', 'disabled');

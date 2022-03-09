@@ -19,6 +19,7 @@ class MoviesController < ApplicationController
   def index
     list_id = params[:passed_parameter][:list]
     @list = List.find(list_id)
+    @bookmark = Bookmark.new
     query = params[:passed_parameter][:query].gsub(/[[:punct:]]/, '%')
     @movies = Movie.where("lower(replace(title, '-', '')) LIKE lower(?)", "%#{query}%").order('popularity DESC')
   end

@@ -10,9 +10,13 @@ require("channels")
 
 import 'bootstrap';
 
+import { initShow } from '../componets/initShow';
+import { initHide } from '../componets/initHide';
 import { initDisable } from '../componets/initDisable';
 
 document.addEventListener('turbolinks:load', () => {
+  initShow();
+  initHide();
   initDisable();
 });
 
