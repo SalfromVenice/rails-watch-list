@@ -10,21 +10,10 @@
         <h4 class="scroll h7 p-1"><%= m['title'] %></h4>
         <p class="scroll card-p p-1"><%= m['overview'] %></p>
       </div>
-       <%= link_to icon('fas', 'plus'), new_list_bookmark_path(list_id: @list.id, movie_id: m['id']), class: "btn btn-success btn-movie" %>
+      <%= link_to icon('fas', 'plus'), new_list_bookmark_path(list_id: @list.id, movie_id: m['id']), class: "btn btn-success btn-movie" %>
     </div>
   <% end %>
 <% end %>
 </div>
 <br>
 <%= link_to '< Back', :back, class: "btn btn-outline-primary" %>
-<%# <div class="bg"> %>
-  <%# <div class="container bg-light col-6 popup"> %>
-    <%# <h2>Comment</h2> %>
-    <%# <span class="x"><%= icon('fas', 'times-circle') %><%#</span> %>
-      <%# simple_form_for [@list, @bookmark], url: (new_list_bookmark_path) do |f| %>
-        <%# f.hidden_field :movie_id, value: @movie.id %>
-        <%# f.input :comment %>
-        <%# f.button :submit, class: 'btn btn-primary btn-sm' %>
-      <%# end %>
-  <%# </div>
-</div> %>

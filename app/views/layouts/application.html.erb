@@ -17,9 +17,7 @@
         <p class="alert"><%= alert %></p>
         <%= yield %>
       </div>
-      <div class="footer">
-        <%= render 'shared/footer' %>
-      </div>
+        <%= render 'shared/footer' unless current_page?(new_user_session_path) || current_page?(new_user_registration_path) %>
     </div>
   </body>
 </html>
