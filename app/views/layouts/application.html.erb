@@ -11,10 +11,13 @@
   </head>
 
   <body>
-    <div class="container">
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
-      <%= yield %>
+    <div class="wrapper">
+      <div class="container">
+        <p class="notice"><%= notice %></p>
+        <p class="alert"><%= alert %></p>
+        <%= yield %>
+      </div>
+        <%= render 'shared/footer' unless current_page?(new_user_session_path) || current_page?(new_user_registration_path) %>
     </div>
   </body>
 </html>

@@ -2,12 +2,14 @@ class ListsController < ApplicationController
   def index
     @user = current_user
     @lists = List.where(user_id: @user)
+    @list = List.new
   end
 
   def show
     @list = List.find(params[:id])
     @bookmarks = @list.bookmarks
     @bookmark = Bookmark.new
+    @movie = Movie.new
   end
 
   def new
